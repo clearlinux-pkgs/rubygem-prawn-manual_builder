@@ -1,0 +1,33 @@
+From b85844cc93b91ee2d0cd0afea45b231c6e78c0d7 Mon Sep 17 00:00:00 2001
+From: Athenas Jimenez <athenas.jimenez.gonzalez@intel.com>
+Date: Fri, 10 Jul 2015 15:50:25 +0000
+Subject: [PATCH] Fix coderay version
+
+Signed-off-by: Athenas Jimenez <athenas.jimenez.gonzalez@intel.com>
+---
+ rubygem-prawn-manual_builder.gemspec | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/rubygem-prawn-manual_builder.gemspec b/rubygem-prawn-manual_builder.gemspec
+index db9621b..82c2407 100644
+--- a/rubygem-prawn-manual_builder.gemspec
++++ b/rubygem-prawn-manual_builder.gemspec
+@@ -20,12 +20,12 @@ Gem::Specification.new do |s|
+     s.specification_version = 4
+ 
+     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+-      s.add_runtime_dependency(%q<coderay>, ["~> 1.0.7"])
++      s.add_runtime_dependency(%q<coderay>, [">= 1.0.7"])
+     else
+-      s.add_dependency(%q<coderay>, ["~> 1.0.7"])
++      s.add_dependency(%q<coderay>, [">= 1.0.7"])
+     end
+   else
+-    s.add_dependency(%q<coderay>, ["~> 1.0.7"])
++    s.add_dependency(%q<coderay>, [">= 1.0.7"])
+   end
+ end
+ 
+-- 
+2.4.2
+
